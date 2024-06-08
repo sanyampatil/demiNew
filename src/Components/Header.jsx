@@ -12,7 +12,7 @@ const Header = () => {
       <div className='container'>
         <div className='relative -mx-4 flex items-center justify-between'>
           <div className='w-60 max-w-full px-4'>
-            <a href='/#' className='block w-full py-5'>
+            <a href='/home' className='block w-full py-5'>
               <img
                 src='https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo.svg'
                 alt='logo'
@@ -23,6 +23,7 @@ const Header = () => {
                 alt='logo'
                 className='w-full hidden dark:block'
               />
+              {/* <h1 className='text-4xl'>जिल्हा क्रीडा समिति यवतमाळ </h1> */}
             </a>
           </div>
           <div className='flex w-full items-center   justify-between px-4'>
@@ -62,7 +63,7 @@ const Header = () => {
               </a>
 
               <a
-                href='/#'
+                href='/UserRegistration'
                 className='rounded-lg bg-primary px-7 py-3 text-base font-medium text-black bg-slate-100  hover:bg-opacity-90'
               >
                 Sign Up
