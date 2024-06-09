@@ -6,7 +6,7 @@ const UserRegistration = () => {
   const { register } = useForm()
 
   return (
-    <div>
+    <div className='mt-20'>
       <div>
         <div>
           <div className='p-8 rounded border border-gray-200 mt-10'>

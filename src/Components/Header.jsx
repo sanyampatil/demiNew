@@ -1,28 +1,28 @@
 import React, { useState } from 'react'
 import { BsMenuButton } from 'react-icons/bs'
 import { FcMenu } from 'react-icons/fc'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <header
-      className={`absolute left-0 top-0 z-20 flex w-full border-2 border-white items-center`}
-    >
+    <header className={`absolute left-0 top-0 z-20 flex w-full items-center`}>
       <div className='container'>
         <div className='relative -mx-4 flex items-center justify-between'>
           <div className='w-60 max-w-full px-4'>
-            <a href='/home' className='block w-full py-5'>
-              <img
+            <a href='/home' className='block  py-5'>
+              <h1 className=' text-white text-2xl ml-5  '>JKSMY</h1>
+              {/* <img
                 src='https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo.svg'
                 alt='logo'
                 className='w-full dark:hidden'
-              />
-              <img
+              /> */}
+              {/* <img
                 src='https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-white.svg'
                 alt='logo'
                 className='w-full hidden dark:block'
-              />
+              /> */}
               {/* <h1 className='text-4xl'>जिल्हा क्रीडा समिति यवतमाळ </h1> */}
             </a>
           </div>
@@ -54,20 +54,17 @@ const Header = () => {
                 </ul>
               </nav>
             </div>
-            <div className='justify-end pr-16 sm:flex lg:pr-0'>
-              <a
-                href='/#'
-                className='px-7 py-3 text-base font-medium text-dark hover:text-primary text-white '
-              >
-                Sign in
-              </a>
-
-              <a
-                href='/UserRegistration '
-                className='rounded-lg bg-primary px-7 py-3 text-base font-medium text-white bg-slate-100  hover:bg-opacity-90'
-              >
-                Sign Up
-              </a>
+            <div className='justify-end gap-5 pr-16 sm:flex lg:pr-0'>
+              <Link to='/'>
+                <button class='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'>
+                  login
+                </button>
+              </Link>
+              <Link to='/UserRegistration'>
+                <button class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+                  Signup
+                </button>
+              </Link>
             </div>
           </div>
         </div>
