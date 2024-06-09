@@ -5,17 +5,21 @@ const Home = () => {
     <div className='   '>
       <div
         className=' 
- relative bg-yellow-400
+ relative  bg-slate-950
  pb-[110px] pt-[120px] dark:bg-dark lg:pt-[150px] '
       >
         <div className='container'>
-          <div className='-mx-4 flex flex-wrap'>
-            <div className='w-full px-4 lg:w-5/12'>
-              <div className='hero-content m-10'>
-                <h1 className='mb-5 text-4xl font-bold !leading-[1.208] text-dark dark:text-black sm:text-[42px] lg:text-[40px] xl:text-5xl'>
-                  Kickstart Startup Website with TailGrids
+          <div className='-mx-4 flex flex-wrap '>
+            <div className='w-full px-4 lg:w-[50%]'>
+              <div className='hero-content ml-10'>
+                <h1 className='mt-10 text-white mb-16 text-4xl font-bold tracking-tight md:text-6xl xl:text-6xl leading-7'>
+                  जिल्हा क्रीडा संकुल समिती अंतर्गत
+                  <div className=' text-5xl text-blue-500 md:text-6xl xl:text-6xl'>
+                    जलतरण तलाव ,
+                  </div>
+                  यवतमाळ <br />
                 </h1>
-                <p className='mb-8 max-w-[480px] text-base text-body-color dark:text-dark-6'>
+                <p className='mb-8 max-w-[480px] text-base text-body-color   text-gray-500'>
                   With TailGrids, business and students thrive together.
                   Business can perfectly match their staffing to changing demand
                   throughout the dayed.
@@ -68,7 +72,7 @@ const Home = () => {
                   </li>
                 </ul>
                 <div className='clients pt-16'>
-                  <h6 className='mb-6 flex items-center text-xs font-normal text-body-color dark:text-dark-6'>
+                  <h6 className='mb-6 flex items-center  text-xs font-normal text-body-color dark:text-dark-6'>
                     Some Of Our Clients
                     <span className='ml-3 inline-block h-px w-8 bg-body-color'></span>
                   </h6>
@@ -99,7 +103,7 @@ const Home = () => {
                   <img
                     src='https://as1.ftcdn.net/v2/jpg/01/24/07/26/1000_F_124072644_nMMO9B99SkkY2mpScA0kNQqXn5xNJKCw.jpg'
                     alt='hero'
-                    className='max-w-full h-[60vh] l g:ml-auto'
+                    className='max-w-full h-[40vh] lg:ml-auto'
                   />
                   <span className='absolute -bottom-8 -left-8 z-[-1]'>
                     <svg
