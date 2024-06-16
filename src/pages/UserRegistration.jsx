@@ -35,7 +35,6 @@ const UserRegistration = () => {
                     placeholder='Enter your name'
                   />
                 </div> */}
-
                 <Input
                   label='Full Name: '
                   placeholder='Enter your full name'
@@ -43,8 +42,8 @@ const UserRegistration = () => {
                     required: true
                   })}
                 />
-                <div>
-                  <label
+                {/* <div> */}
+                {/* <label
                     htmlFor='email'
                     className='text-sm text-gray-700 block mb-1 font-medium'
                   >
@@ -58,8 +57,23 @@ const UserRegistration = () => {
                     // onChange={handleUserInput}
                     className='bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full'
                     placeholder='yourmail@provider.com'
-                  />
-                </div>
+                  /> */}
+                <Input
+                  label='Email: '
+                  placeholder='Enter your  dkdkemail'
+                  type='email'
+                  {...register('email', {
+                    required: true,
+                    validate: {
+                      matchPatern: value =>
+                        /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
+                          value
+                        ) || 'Email address must be a valid address'
+                    }
+                  })}
+                />
+                {/* </div> */}
+                {/*                 
                 <div>
                   <label
                     htmlFor='contact'
@@ -76,7 +90,16 @@ const UserRegistration = () => {
                     className='bg-gray-100 border border-gray-200 rounded py-1 px-3 block focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full'
                     placeholder='+91XXXXXXXXXX'
                   />
-                </div>
+                </div> */}
+
+                <Input
+                  label=' mobile number: '
+                  type='number'
+                  placeholder='mobile number'
+                  {...register('name', {
+                    required: true
+                  })}
+                />
                 <div className=' flex gap-7 items-center'>
                   <label
                     htmlFor='job'
