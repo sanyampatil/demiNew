@@ -50,17 +50,17 @@ const Header = () => {
                   <ListItem NavLink='/#'>Home</ListItem>
                   <ListItem NavLink='/#'>Payment</ListItem>
                   <ListItem NavLink='/#'>About</ListItem>
-                  <ListItem NavLink='/#'>Blog</ListItem>
+                  <ListItem NavLink='/batches'>batches</ListItem>
                 </ul>
               </nav>
             </div>
             <div className='justify-end gap-5 pr-16 sm:flex lg:pr-0'>
-              <Link to='/'>
+              <Link to='/login'>
                 <button class='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'>
                   login
                 </button>
               </Link>
-              <Link to='/UserRegistration'  >
+              <Link to='/UserRegistration'>
                 <button class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
                   Signup
                 </button>
