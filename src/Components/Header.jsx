@@ -47,7 +47,7 @@ const Header = () => {
                 } `}
               >
                 <ul className='block lg:flex'>
-                  <ListItem NavLink='/#'>Home</ListItem>
+                  <ListItem NavLink='/#'>Home</ListItem>s
                   <ListItem NavLink='/#'>Payment</ListItem>
                   <ListItem NavLink='/#'>About</ListItem>
                   <ListItem NavLink='/batches'>batches</ListItem>

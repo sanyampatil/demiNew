@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import UserRegistration from './pages/UserRegistration'
 import Batches from './pages/Batches'
 import Login from './pages/Login'
+import VerifyOtp from './pages/VerifyOtp'
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
           <Route path='' element={<Home />} />
           <Route path='/UserRegistration' element={<UserRegistration />} />
           <Route path='/batches' element={<Batches />} />
-          ;<Route path='/login' element={<Login />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/verify-otp' element={<VerifyOtp />} />
         </Route>
       </Routes>
     </div>

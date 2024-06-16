@@ -1,9 +1,17 @@
 import React from 'react'
-import { useForm } from 'react-hook-form'
+// import { useForm } from 'react-hook-form'
+import { useFileHandler } from '6pp'
+import { CameraAlt as CameraAltIcon } from '@mui/icons-material'
+
+import { Avatar, IconButton, Stack, Typography } from '@mui/material'
 
 import Input from '../Components/ui/Input'
+
+import { VisuallyHiddenInput } from '../Components/style/StyledComponents'
+import { useForm } from 'react-hook-form'
 const UserRegistration = () => {
   const { register } = useForm()
+  const avatar = useFileHandler('single')
 
   return (
     <div className='mt-20'>
@@ -18,6 +26,49 @@ const UserRegistration = () => {
 
             <form>
               <div className='mt-8 grid lg:grid-cols-2 gap-4'>
+                <Stack position={'relative'} width={'10rem'} margin={'auto'}>
+                  <Avatar
+                    sx={{
+                      width: '10rem',
+                      height: '10rem',
+                      objectFit: 'contain'
+                    }}
+                    src={avatar.preview}
+                  />
+
+                  <IconButton
+                    sx={{
+                      position: 'absolute',
+                      bottom: '0',
+                      right: '0',
+                      color: 'white',
+                      bgcolor: 'rgba(0,0,0,0.5)',
+                      ':hover': {
+                        bgcolor: 'rgba(0,0,0,0.7)'
+                      }
+                    }}
+                    component='label'
+                  >
+                    <>
+                      <CameraAltIcon />
+                      <VisuallyHiddenInput
+                        type='file'
+                        onChange={avatar.changeHandler}
+                      />
+                    </>
+                  </IconButton>
+                </Stack>
+                {avatar.error && (
+                  <Typography
+                    m={'1rem auto'}
+                    width={'fit-content'}
+                    display={'block'}
+                    color='error'
+                    variant='caption'
+                  >
+                    {avatar.error}
+                  </Typography>
+                )}
                 {/* <div>
                   <label
                     htmlFor='name'
@@ -91,7 +142,6 @@ const UserRegistration = () => {
                     placeholder='+91XXXXXXXXXX'
                   />
                 </div> */}
-
                 <Input
                   label=' mobile number: '
                   type='number'
@@ -100,6 +150,19 @@ const UserRegistration = () => {
                     required: true
                   })}
                 />
+                <div>
+                  <Input
+                    label=' mobile number: '
+                    type='Date'
+                    placeholder='mobile number'
+                    {...register('name', {
+                      required: true
+                    })}
+                  />
+                  <button className='p-2 rounded-md mt-2 bg-purple-500 text-white'>
+                    get age
+                  </button>
+                </div>
                 <div className=' flex gap-7 items-center'>
                   <label
                     htmlFor='job'
